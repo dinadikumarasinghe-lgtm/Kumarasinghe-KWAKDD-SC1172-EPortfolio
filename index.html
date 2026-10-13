@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Student e-portfolio of Kumarasinghe K.W.A.K.D.D, a BSc (Hons) in Biotechnology student at SLIIT.">
+  <title>Kumarasinghe K.W.A.K.D.D | Student Portfolio</title>
+  <style>
+    :root {
+      --navy: #142b4a;
+      --blue: #245b91;
+      --sky: #eaf2fb;
+      --ink: #253247;
+      --muted: #65748a;
+      --paper: #ffffff;
+      --page: #f5f7fb;
+      --line: #dce4ee;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      background: var(--page);
+      color: var(--ink);
+      font-family: Arial, Helvetica, sans-serif;
+      line-height: 1.7;
+    }
+    a { color: var(--blue); }
+    .topbar {
+      background: var(--paper);
+      border-bottom: 1px solid var(--line);
+      position: sticky;
+      top: 0;
+      z-index: 5;
+    }
+    .nav {
+      max-width: 1080px;
+      margin: auto;
+      padding: 13px 22px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+    }
+    .brand { font-weight: 700; color: var(--navy); text-decoration: none; }
+    .navlinks { display: flex; flex-wrap: wrap; gap: 16px; }
+    .navlinks a { color: var(--muted); text-decoration: none; font-size: .92rem; }
+    .navlinks a:hover { color: var(--blue); }
+    .hero {
+      background: linear-gradient(130deg, #142b4a, #245b91);
+      color: white;
+      padding: 78px 22px 72px;
+    }
+    .hero-inner {
+      max-width: 1080px;
+      margin: auto;
+      display: grid;
+      grid-template-columns: minmax(0, 1.4fr) minmax(230px, .6fr);
+      align-items: center;
+      gap: 42px;
+    }
+    .eyebrow {
+      text-transform: uppercase;
+      letter-spacing: .16em;
+      font-size: .78rem;
+      color: #d3e5fa;
+      font-weight: 700;
+    }
+    h1 { font-size: clamp(2.1rem, 5vw, 3.8rem); line-height: 1.13; margin: 12px 0 18px; }
+    .hero p { max-width: 650px; color: #e9f1fb; margin: 0 0 25px; }
+    .tag {
+      display: inline-block;
+      border: 1px solid rgba(255,255,255,.4);
+      border-radius: 999px;
+      padding: 6px 12px;
+      font-size: .88rem;
+      margin: 4px 5px 4px 0;
+    }
+    .portrait-placeholder {
+      min-height: 250px;
+      border: 1px dashed rgba(255,255,255,.6);
+      border-radius: 22px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 20px;
+      color: #eaf2fb;
+      background: rgba(255,255,255,.08);
+    }
+    .portrait-placeholder img {
+      display: block;
+      width: 100%;
+      max-width: 260px;
+      aspect-ratio: 4 / 5;
+      object-fit: cover;
+      border-radius: 18px;
+    }
+    .button {
+      display: inline-block;
+      background: white;
+      color: var(--navy);
+      text-decoration: none;
+      font-weight: 700;
+      padding: 11px 18px;
+      border-radius: 8px;
+    }
+    main { max-width: 1080px; padding: 35px 22px 55px; margin: auto; }
+    section {
+      background: var(--paper);
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      padding: 28px;
+      margin: 0 0 22px;
+      box-shadow: 0 5px 18px rgba(25, 48, 78, .035);
+      scroll-margin-top: 90px;
+    }
+    .section-label {
+      color: var(--blue);
+      text-transform: uppercase;
+      font-size: .76rem;
+      letter-spacing: .14em;
+      font-weight: 700;
+      margin-bottom: 5px;
+    }
+    h2 { color: var(--navy); font-size: 1.65rem; margin: 0 0 12px; }
+    h3 { color: var(--navy); font-size: 1.08rem; margin-bottom: 4px; }
+    p { margin-top: 0; }
+    .grid-two { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
+    .info-card { border: 1px solid var(--line); background: #fbfcfe; padding: 17px; border-radius: 10px; }
+    .small { color: var(--muted); font-size: .93rem; }
+    .pill-list { display: flex; flex-wrap: wrap; gap: 9px; padding: 0; list-style: none; }
+    .pill-list li { background: var(--sky); color: var(--navy); padding: 7px 12px; border-radius: 999px; font-size: .92rem; }
+    .timeline { border-left: 2px solid var(--line); padding-left: 20px; margin-left: 6px; }
+    .timeline-item { margin: 0 0 20px; position: relative; }
+    .timeline-item::before { content: ""; width: 10px; height: 10px; background: var(--blue); border-radius: 50%; position: absolute; left: -26px; top: 9px; }
+    .contact-link { overflow-wrap: anywhere; }
+    footer { text-align: center; padding: 25px 20px; color: var(--muted); font-size: .9rem; }
+    @media (max-width: 720px) {
+      .nav { align-items: flex-start; flex-direction: column; }
+      .hero-inner { grid-template-columns: 1fr; }
+      .portrait-placeholder { min-height: 150px; }
+      .grid-two { grid-template-columns: 1fr; }
+      section { padding: 21px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="topbar">
+    <nav class="nav" aria-label="Main navigation">
+      <a class="brand" href="#home">K.W.A.K.D.D.</a>
+      <div class="navlinks">
+        <a href="#about">About</a>
+        <a href="#education">Education</a>
+        <a href="#qualifications">Achievements</a>
+        <a href="#skills">Skills</a>
+        <a href="#interests">Interests</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </nav>
+  </div>
+
+  <header class="hero" id="home">
+    <div class="hero-inner">
+      <div>
+        <div class="eyebrow">Student E-Portfolio</div>
+        <h1>Kumarasinghe K.W.A.K.D.D</h1>
+        <p>I am a Biotechnology undergraduate at SLIIT. This portfolio introduces my educational background, achievements, interests, and the skills I hope to continue developing during my studies.</p>
+        <div>
+          <span class="tag">BSc (Hons) in Biotechnology</span>
+          <span class="tag">SLIIT</span>
+        </div>
+        <p style="margin-top: 25px;"><a class="button" href="#about">Get to know me</a></p>
+      </div>
+      <div class="portrait-placeholder" style="border:0;background:transparent;padding:0;">
+        <img src="profile.jpg" alt="Portrait photograph from my CV" style="display:block;width:100%;max-width:260px;aspect-ratio:1 / 1;object-fit:cover;border-radius:18px;margin:auto;" />
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section id="about">
+      <div class="section-label">Introduction</div>
+      <h2>About Me</h2>
+      <p>My name is Kumarasinghe K.W.A.K.D.D, and I am studying for a BSc (Hons) in Biotechnology at SLIIT. I completed my G.C.E. Ordinary Level examinations in 2022 and my G.C.E. Advanced Level examinations in 2025 at Newstead Girls' College, Negombo. I am interested in learning more about biological sciences and developing my practical skills. Through this portfolio, I would like to share a little about my background and the things I have achieved so far.</p>
+    </section>
+
+    <section id="education">
+      <div class="section-label">My Background</div>
+      <h2>Educational Qualifications</h2>
+      <div class="timeline">
+        <div class="timeline-item">
+          <h3>BSc (Hons) in Biotechnology</h3>
+          <p class="small">Sri Lanka Institute of Information Technology (SLIIT)</p>
+          <p>I am currently following this degree programme and working to develop my knowledge in biotechnology.</p>
+        </div>
+        <div class="timeline-item">
+          <h3>G.C.E. Advanced Level — 2025</h3>
+          <p>Completed in 2025 at Newstead Girls' College, Negombo.</p>
+        </div>
+        <div class="timeline-item">
+          <h3>G.C.E. Ordinary Level — 2022</h3>
+          <p>Completed in 2022 at Newstead Girls' College, Negombo.</p>
+        </div>
+        <div class="timeline-item">
+          <h3>Secondary School</h3>
+          <p class="small">Newstead Girls' College, Negombo</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="experience">
+      <div class="section-label">Experience</div>
+      <h2>Work Experience</h2>
+      <p>I do not have formal work experience yet. At the moment, I am focusing on my education and building the knowledge and skills that will help me in the future.</p>
+    </section>
+
+    <section id="qualifications">
+      <div class="section-label">Beyond the Classroom</div>
+      <h2>Other Qualifications and Achievements</h2>
+      <div class="grid-two">
+        <div class="info-card">
+          <h3>School Leadership</h3>
+          <p class="small">I served as a prefect, which gave me opportunities to practise responsibility and teamwork.</p>
+        </div>
+        <div class="info-card">
+          <h3>Sports and Activities</h3>
+          <p class="small">My activities include tennis, netball, and gymnastics.</p>
+        </div>
+        <div class="info-card">
+          <h3>Performing Arts</h3>
+          <p class="small">I have an interest and experience in dance and singing.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects">
+      <div class="section-label">Learning</div>
+      <h2>Projects</h2>
+      <p>I have not added any projects to my portfolio yet. I hope to include academic or practical projects as I gain more experience during my degree.</p>
+    </section>
+
+    <section id="skills">
+      <div class="section-label">What I Bring</div>
+      <h2>Skills</h2>
+      <p>I am still developing my skills as a student. The activities I take part in have given me opportunities to practise and improve.</p>
+      <ul class="pill-list">
+        <li>Willingness to learn</li>
+        <li>Communication</li>
+        <li>Teamwork</li>
+        <li>Time management</li>
+        <li>Microsoft Word</li>
+        <li>Microsoft PowerPoint</li>
+        <li>Microsoft Excel</li>
+        <li>Internet research</li>
+        <li>Basic laboratory skills</li>
+        <li>Problem-solving</li>
+      </ul>
+      <p class="small">Edit this list so it only includes skills you feel comfortable describing as your own.</p>
+    </section>
+
+    <section id="interests">
+      <div class="section-label">Outside My Studies</div>
+      <h2>Hobbies and Interests</h2>
+      <p>My academic interests include biotechnology, molecular biology, microbiology, and laboratory science. I also enjoy taking part in sports and creative activities.</p>
+    </section>
+
+    <section id="resume">
+      <div class="section-label">My CV</div>
+      <h2>Resume</h2>
+      <p>You can view or download a portfolio-ready version of my CV below. For privacy, this public copy does not include my home address or phone number.</p>
+      <p><a class="button" href="resume.pdf" target="_blank" rel="noopener">View or download my CV (PDF)</a></p>
+    </section>
+
+    <section id="contact">
+      <div class="section-label">Get in Touch</div>
+      <h2>Contact Details</h2>
+      <p>Email: <a class="contact-link" href="mailto:dinadikumarasinghe@gmail.com">dinadikumarasinghe@gmail.com</a></p>
+    </section>
+  </main>
+
+  <footer>
+    <p>Student E-Portfolio · SC1172: Introduction to Information Technology</p>
+    <p>Created by Kumarasinghe K.W.A.K.D.D</p>
+  </footer>
+</body>
+</html>
